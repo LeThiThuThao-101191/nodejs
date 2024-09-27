@@ -1,0 +1,97 @@
+{
+  "osType": "Windows_NT",
+  "platform": "win32",
+  "totalMemory": 8269565952,
+  "freeMemory": 581029888,
+  "usedMemory": 7688536064,
+  "cpus": [
+    {
+      "model": "11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz",
+      "speed": 2419,
+      "times": {
+        "user": 2002687,
+        "nice": 0,
+        "sys": 1121812,
+        "idle": 8360890,
+        "irq": 101281
+      }
+    },
+    {
+      "model": "11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz",
+      "speed": 2419,
+      "times": {
+        "user": 1896484,
+        "nice": 0,
+        "sys": 932562,
+        "idle": 8656218,
+        "irq": 38843
+      }
+    },
+    {
+      "model": "11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz",
+      "speed": 2419,
+      "times": {
+        "user": 2333296,
+        "nice": 0,
+        "sys": 1095250,
+        "idle": 8056718,
+        "irq": 38734
+      }
+    },
+    {
+      "model": "11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz",
+      "speed": 2419,
+      "times": {
+        "user": 2143453,
+        "nice": 0,
+        "sys": 1009312,
+        "idle": 8332500,
+        "irq": 22687
+      }
+    },
+    {
+      "model": "11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz",
+      "speed": 2419,
+      "times": {
+        "user": 2057359,
+        "nice": 0,
+        "sys": 909421,
+        "idle": 8518484,
+        "irq": 55828
+      }
+    },
+    {
+      "model": "11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz",
+      "speed": 2419,
+      "times": {
+        "user": 1773140,
+        "nice": 0,
+        "sys": 800500,
+        "idle": 8911625,
+        "irq": 35687
+      }
+    },
+    {
+      "model": "11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz",
+      "speed": 2419,
+      "times": {
+        "user": 2170437,
+        "nice": 0,
+        "sys": 941546,
+        "idle": 8373281,
+        "irq": 36656
+      }
+    },
+    {
+      "model": "11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz",
+      "speed": 2419,
+      "times": {
+        "user": 1961750,
+        "nice": 0,
+        "sys": 904187,
+        "idle": 8619312,
+        "irq": 22687
+      }
+    }
+  ]
+}

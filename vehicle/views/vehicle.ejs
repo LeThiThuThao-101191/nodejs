@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating a server with Node.js</title>
+    <link rel="stylesheet" href="/styles/style.css">
+ 
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 class="title">Creating a server with Node.js</h1>
+      <p>Hello, I'm a Node.js server for searching vehicle plate number!</p>
+      <div class="dropdown">
+        <div class="dropdown-select">
+          <input type="text" placeholder=" Thành Phố" class="dropdown-input">
+        </div>
+        <div class="dropdown-content">
+          <% vehiclePlates.forEach(function(plate) { %>
+            <a href="#" data-city="<%= plate.city %>" data-plate="<%= plate.plate_no %>">
+              <b>
+                <%= plate.city %>
+              </b>
+            </a>
+            <% }); %>
+        </div>
+        <div class="result">
+          <p id="vehiclePlate">
+            <b>Biển số xe:</b>
+            <span class="plate-number"></span>
+          </p>
+        </div>
+      </div>
+
+      <script>
+        const dropdown = document.querySelector(".dropdown");
+        const dropdownSelect = document.querySelector(".dropdown-select");
+        const dropdownInput = document.querySelector(".dropdown-input");
+        const dropdownContent = document.querySelector(".dropdown-content");
+        const plateNumberDisplay = document.querySelector(".plate-number");
+
+        // Lưu trữ dữ liệu biển số xe
+        const plateData = [];
+        document.querySelectorAll('.dropdown-content a').forEach(a => {
+          plateData.push({
+            city: a.dataset.city,
+            plate_no: a.dataset.plate
+          });
+        });
+
+        function updatePlate(city) {
+          const plate = plateData.find(p => p.city === city);
+          if (plate) {
+            plateNumberDisplay.textContent = plate.plate_no;
+          } else {
+            plateNumberDisplay.textContent = '';
+          }
+          dropdownInput.value = city;
+        }
+
+        dropdownSelect.addEventListener("click", () => {
+          dropdownContent.classList.toggle("show");
+        });
+
+        window.addEventListener("click", (event) => {
+          if (!event.target.closest(".dropdown")) {
+            dropdownContent.classList.remove("show");
+          }
+        });
+
+        dropdownContent.addEventListener('click', (event) => {
+          if (event.target.closest('a')) {
+            const link = event.target.closest('a');
+            const city = link.dataset.city;
+            updatePlate(city);
+            dropdownContent.classList.remove('show');
+            event.preventDefault();
+          }
+        });
+
+        dropdownInput.addEventListener('input', (event) => {
+          const inputValue = event.target.value.toLowerCase();
+          const options = dropdownContent.querySelectorAll('a');
+          options.forEach(option => {
+            const optionText = option.textContent.toLowerCase();
+            if (optionText.includes(inputValue)) {
+              option.style.display = 'block';
+            } else {
+              option.style.display = 'none';
+            }
+          });
+        });
+      </script>
+    </div>
+  </body>
+
+</html>

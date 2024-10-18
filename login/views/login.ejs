@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <img src="https://hoaminhngoc.vn/wp-content/uploads/2024/08/anh-avatar-vo-tri-2.jpg" alt="Avatar">
+        <form action="/login" method="post">
+            <h4 align="left" style="margin-bottom: -5px;">User name</h4>
+            <input type="text" id="username" name="username" placeholder="admin@example.com" required>
+            <h4 align="left" style="margin-bottom: -5px; margin-top: 5px">PassWord</h4>
+            <input type="password" id="password" name="password" placeholder="*******" required>
+            
+            
+            
+             <% if (typeof error !== 'undefined') { %>
+                <p class="error"><%= error %></p>
+            <% } %>
+             
+            
+            <button type="submit">Login</button>
+            <div style="text-align: left;">
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember"> Remember me</label><br>
+            </div>
+        </form>
+        <button type="button" class="cancel-btn">Cancel</button>
+        <a href="#">Forgot PassWord?</a>
+    </div>
+</body>
+</html>

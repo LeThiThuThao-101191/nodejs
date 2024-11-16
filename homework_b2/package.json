@@ -1,0 +1,11 @@
+{
+  "name": "hwb2",
+  
+  "dependencies": {
+    "nodemon": "^3.1.6"
+  },
+  "scripts": {
+    "start": "nodemon systemInfor.js"
+  }
+
+}

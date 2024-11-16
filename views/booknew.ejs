@@ -1,0 +1,40 @@
+<%- include('layouts/header') %>
+<main>
+    <div class="container my-5">
+        <h2 class="text-center">New Booking</h2>
+        <!-- Form để tạo đặt chỗ mới -->
+        <form action="/books/create" method="post" > 
+            <!-- Tên Khách Hàng -->
+            <div class="mb-3">
+                <label for="customerName" class="form-label">customerName</label>
+                <input type="text" class="form-control" id="customerName" name="customerName" required>
+            </div>
+
+            <!-- Ngày -->
+            <div class="mb-3">
+                <label for="date" class="form-label">Date</label>
+                <input type="date" class="form-control" id="date" name="date" required>
+            </div>
+
+            <!-- Giờ -->
+            <div class="mb-3">
+                <label for="time" class="form-label">Time</label>
+                <input type="time" class="form-control" id="time" name="time" required>
+            </div>
+
+            <!-- Trạng Thái -->
+            <div class="mb-3">
+                <label for="status" class="form-label">Status</label>
+                <select class="form-control" id="status" name="status" required>
+                    <option value="Pending">Pending</option>
+                    <option value="Confirmed">Confirmed</option>
+                    <option value="Cancelled">Cancelled</option>
+                </select>
+            </div>
+
+            <!-- Nút Submit -->
+           <a ><button type="submit" class="btn btn-success">Booking</button></a>
+        </form>
+    </div>
+</main>
+<%- include('layouts/footer') %>

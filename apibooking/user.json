@@ -1,0 +1,19 @@
+[
+    {
+      "username": "thuthao",
+      "password": "123123"
+    },
+    {
+      "username": "admin",
+      "password": "hashed_admin_password"
+    },
+    {
+      "username": "john_doe",
+      "password": "hashed_john_doe_password"
+    },
+    {
+      "username": "alice",
+      "password": "hashed_alice_password"
+    }
+  ]
+  

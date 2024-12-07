@@ -1,0 +1,37 @@
+<%- include('layouts/header') %>
+
+<main class="container mt-5">
+    <h1 class="mb-4">Edit Booking</h1>
+
+    <form action="/books/edit/<%= book._id %>" method="POST">
+        <div class="mb-3">
+            <label for="customerName" class="form-label">Customer Name</label>
+            <input type="text" name="customerName" class="form-control" value="<%= book.customerName %>" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="date" class="form-label">Date</label>
+            <input type="date" name="date" class="form-control" value="<%= book.date instanceof Date ? book.date.toISOString().split('T')[0] : book.date %>" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="time" class="form-label">Time</label>
+            <input type="time" name="time" class="form-control" value="<%= book.time %>" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="status" class="form-label">Status</label>
+          <select class="form-control" id="status" name="status" required>
+              <option value="Pending">Pending</option>
+              <option value="Confirmed">Confirmed</option>
+              <option value="Cancelled">Cancelled</option>
+          </select>
+      </div>
+
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary">Update Booking</button>
+        </div>
+    </form>
+</main>
+
+<%- include('layouts/footer') %>
